@@ -1,48 +1,37 @@
-# VAR del Corazón - versión 2
+# VAR - CHECK DEL DÍA
 
-Esta versión ya trae cargado tu ID de Google Sheets:
+Versión actualizada según tus cambios.
 
-1uPhLxoMIV8A4yspmBfQ2tccEzhDtUpRYXV83n4B3hi8
+## Cambios aplicados
 
-## Qué cambió
+- "Chequeo de paz" cambiado por "CHECK DEL DÍA".
+- Eliminado el texto descriptivo debajo del título.
+- Eliminadas las tarjetas "modo tierno", "sin roja directa", "con dato mundialista".
+- Eliminado el pie "Inspirado en fútbol, paciencia, cariño y ganas de estar bien".
+- "VAR del corazón" cambiado por "VAR".
+- Pregunta 5 actualizada:
+  - Que me den un ratito
+  - Una charla
+  - Que me hagan reír
+  - Un mimo
+- Agregada pregunta random de Maradona:
+  - ¿Contra qué selección hizo el gol de “La Mano de Dios” en México 1986?
+  - Respuesta correcta: Inglaterra.
+- Final actualizado con tu texto.
+- URL de Apps Script ya cargada:
+  https://script.google.com/macros/s/AKfycbwfGY4J_OmSRboL30Rgii70mEQBEv_fFOFs7Xsvcy_nSbmpFkK2ouGa4danLqPdm03Ahw/exec
 
-- Preguntas más relacionadas con él.
-- Todas las preguntas son multiple choice.
-- Hay una pregunta mundialista con devolución de correcto/incorrecto.
-- El cierre es más tierno y menos reclamante.
-- El Apps Script crea automáticamente la pestaña `Respuestas` y los encabezados.
+## Importante por la pregunta 7
 
-## Lo único que tenés que hacer
+Como ahora la app tiene 7 preguntas, reemplazá el código de Apps Script por el nuevo `apps_script.gs`.
 
-1. Abrí tu Google Sheet.
-2. Andá a `Extensiones > Apps Script`.
-3. Pegá el contenido del archivo `apps_script.gs`.
-4. Tocá `Implementar > Nueva implementación`.
-5. Elegí `Aplicación web`.
-6. Ejecutar como: `Yo`.
-7. Acceso: `Cualquier persona`.
-8. Copiá la URL que termina en `/exec`.
-9. Abrí `index.html` y reemplazá:
+Después actualizá la implementación:
 
-   const GOOGLE_SCRIPT_URL = "PEGAR_ACA_URL_DE_APPS_SCRIPT";
+1. Apps Script.
+2. Implementar.
+3. Administrar implementaciones.
+4. Editar.
+5. Nueva versión.
+6. Implementar.
 
-   por la URL real.
-
-## Cómo publicarla
-
-La opción más simple es subir `index.html` a GitHub Pages y mandarle ese link.
-
-## Mensaje sugerido para enviárselo
-
-Te hice una boludez tierna, no es reclamo ni presión.
-Es un mini VAR emocional con fútbol y cero ganas de pelear.
-Cuando tengas ganas, jugalo ⚽💙
-
-
-## URL de Apps Script ya cargada
-
-La app ya tiene configurada esta URL:
-
-https://script.google.com/macros/s/AKfycbwfGY4J_OmSRboL30Rgii70mEQBEv_fFOFs7Xsvcy_nSbmpFkK2ouGa4danLqPdm03Ahw/exec
-
-Ahora solo falta publicar/subir el `index.html` y mandarle ese link.
+Después subí/publicá el `index.html`.
