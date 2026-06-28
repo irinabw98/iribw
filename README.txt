@@ -50,6 +50,6 @@ https://script.google.com/macros/s/AKfycbwfGY4J_OmSRboL30Rgii70mEQBEv_fFOFs7Xsvc
 
 Flujo actual:
 - Pregunta 7.
-- Botón `Siguiente →`.
+- Botón `Siguiente`.
 - Autoenvío a Google Sheets.
 - Pantalla final tierna.

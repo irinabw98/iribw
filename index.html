@@ -286,7 +286,7 @@
       <h2 class="question" id="questionText"></h2>
       <div class="options" id="options"></div>
       <div id="feedback" class="feedback hidden"></div>
-      <button id="nextBtn" class="btn hidden" onclick="nextQuestion()">Siguiente →</button>
+      <button id="nextBtn" class="btn hidden" onclick="nextQuestion()">Siguiente</button>
     </section>
 
     <section class="card hidden final" id="finalScreen">
@@ -437,7 +437,7 @@
 
       const nextBtn = document.getElementById("nextBtn");
       nextBtn.classList.add("hidden");
-      nextBtn.textContent = "Siguiente →";
+      nextBtn.textContent = "Siguiente";
 
       const box = document.getElementById("options");
       box.innerHTML = "";
@@ -495,7 +495,7 @@
       if(current === questions.length - 1){
         const nextBtn = document.getElementById("nextBtn");
         nextBtn.disabled = true;
-        nextBtn.textContent = "Siguiente →";
+        nextBtn.textContent = "Siguiente";
 
         await submitQuiz();
 
