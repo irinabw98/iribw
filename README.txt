@@ -40,3 +40,16 @@ Después subí/publicá el `index.html`.
 ## Cambio de autoenvío
 
 Ahora, al responder la pregunta 7 y tocar `Siguiente`, la app envía las respuestas automáticamente a Google Sheets y después muestra el mensaje final. Ya no aparece ningún botón que diga `Enviar respuestas`.
+
+
+## URL de Apps Script configurada
+
+Este repo ya tiene cargada esta URL en `index.html`:
+
+https://script.google.com/macros/s/AKfycbwfGY4J_OmSRboL30Rgii70mEQBEv_fFOFs7Xsvcy_nSbmpFkK2ouGa4danLqPdm03Ahw/exec
+
+Flujo actual:
+- Pregunta 7.
+- Botón `Siguiente →`.
+- Autoenvío a Google Sheets.
+- Pantalla final tierna.
