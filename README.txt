@@ -35,3 +35,8 @@ Después actualizá la implementación:
 6. Implementar.
 
 Después subí/publicá el `index.html`.
+
+
+## Cambio de autoenvío
+
+Ahora, al responder la pregunta 7 y tocar `Siguiente`, la app envía las respuestas automáticamente a Google Sheets y después muestra el mensaje final. Ya no aparece ningún botón que diga `Enviar respuestas`.

@@ -301,7 +301,6 @@
       <p>
         Solo quería molestarte un ratito, y espero que hayas sonreído al menos una vez más haciéndolo.
       </p>
-      <button class="btn" onclick="submitQuiz()">Enviar respuestas 💌</button>
       <p class="tiny" id="sendStatus"></p>
     </section>
 
@@ -438,6 +437,7 @@
 
       const nextBtn = document.getElementById("nextBtn");
       nextBtn.classList.add("hidden");
+      nextBtn.textContent = "Siguiente →";
 
       const box = document.getElementById("options");
       box.innerHTML = "";
@@ -491,20 +491,25 @@
       document.getElementById("nextBtn").classList.remove("hidden");
     }
 
-    function nextQuestion(){
-      current++;
+    async function nextQuestion(){
+      if(current === questions.length - 1){
+        const nextBtn = document.getElementById("nextBtn");
+        nextBtn.disabled = true;
+        nextBtn.textContent = "Siguiente →";
 
-      if(current < questions.length){
-        renderQuestion();
-      } else {
+        await submitQuiz();
+
         document.getElementById("quizScreen").classList.add("hidden");
         document.getElementById("finalScreen").classList.remove("hidden");
+        return;
       }
+
+      current++;
+      renderQuestion();
     }
 
     async function submitQuiz(){
       const status = document.getElementById("sendStatus");
-      status.textContent = "Enviando respuestas...";
 
       const payload = {
         fecha: new Date().toISOString(),
@@ -520,16 +525,11 @@
           body: JSON.stringify(payload)
         });
 
-        status.textContent = "Enviado 💌";
-
-        setTimeout(() => {
-          document.getElementById("finalScreen").classList.add("hidden");
-          document.getElementById("thanksScreen").classList.remove("hidden");
-        }, 800);
+        if(status) status.textContent = "";
 
       } catch(error){
         console.error(error);
-        status.textContent = "No se pudo enviar. Revisá la URL de Apps Script.";
+        if(status) status.textContent = "";
       }
     }
   </script>
